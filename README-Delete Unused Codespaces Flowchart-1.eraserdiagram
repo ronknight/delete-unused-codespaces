@@ -1,0 +1,43 @@
+flowchart-diagram
+
+title Delete Unused Codespaces Flowchart
+
+// Define groups for better organization
+Setup [color: lightblue] {
+  Clone Repository [icon: git-branch]
+  Install Dependencies [icon: package]
+  Create .env File [icon: file-text]
+}
+
+Script Execution [color: lightgreen] {
+  Fetch Codespaces [icon: download]
+  Check Pending Changes [icon: check-square]
+  Delete Codespaces [icon: trash-2]
+  Save Deletion Status [icon: save]
+}
+
+// Define the flow
+Start [shape: oval, icon: play] > Clone Repository: Clone the repository
+Clone Repository > Install Dependencies: Install required dependencies
+Install Dependencies > Create .env File: Create .env file with credentials
+Create .env File > Run Script [shape: oval, icon: terminal]: Run the script
+
+Run Script > Fetch Codespaces: Fetch all codespaces for the user
+Fetch Codespaces > Check Pending Changes: Check each codespace for pending changes
+Check Pending Changes > Delete Codespaces: Delete codespaces without pending changes
+Delete Codespaces > Save Deletion Status: Save deletion status to JSON files
+Save Deletion Status > End [shape: oval, icon: stop-circle]: End of script
+
+// Define decision points
+Check Pending Changes > Has Pending Changes? [shape: diamond, icon: alert-triangle]
+Has Pending Changes? > Keep Codespace [shape: oval, icon: archive]: Yes
+Has Pending Changes? > Delete Codespaces: No
+
+// Define connections for decision points
+Keep Codespace > Fetch Next Codespace [shape: oval, icon: refresh]
+Fetch Next Codespace > Check Pending Changes
+
+// Define end points
+Delete Codespaces > Save Deletion Status
+Save Deletion Status > End
+
