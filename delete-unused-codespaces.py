@@ -56,7 +56,7 @@ def main():
             try:
                 owner, repo = codespace_name.split('/')
             except ValueError:
-                print(f'Skipping codespace {codespace_name}: It has unsaved changes.')
+                print(f'Skipping codespace {codespace_name}: It has uncommited or unpushed changes.')
                 continue
             
             # Check branch status to determine pending changes
