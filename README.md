@@ -77,14 +77,6 @@ It is strongly recommended to review the list of codespaces manually before runn
 
 USE AT YOUR OWN RISK.
 
-## Diagrams
-(Add any relevant diagrams or flowcharts here to illustrate the script's workflow)
-
----
-
-Made with ❤️ by [﻿Ronknight](https://github.com/ronknight) 
-
-
 <!-- eraser-additional-content -->
 ## Diagrams
 <!-- eraser-additional-files -->
@@ -92,3 +84,7 @@ Made with ❤️ by [﻿Ronknight](https://github.com/ronknight)
 <!-- end-eraser-additional-files -->
 <!-- end-eraser-additional-content -->
 <!--- Eraser file: https://app.eraser.io/workspace/Go1xRQnNKDSqMrahbLIv --->
+
+---
+
+Made with ❤️ by [﻿Ronknight](https://github.com/ronknight) 
